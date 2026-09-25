@@ -1,0 +1,256 @@
+[
+  {
+    "slug": "google-analytics",
+    "keyword": "google analytics for carrd",
+    "title": "How to Add Google Analytics (GA4) to Carrd",
+    "tier": "Pro Standard",
+    "summary": "Carrd has no built-in visitor stats. To see who visits your site you add the GA4 tag through an Embed element, and Embeds need Pro Standard or higher.",
+    "steps": [
+      "In Google Analytics, create a GA4 property and a Web data stream for your Carrd URL. Copy the full Google tag (the gtag.js snippet), not just the G- ID.",
+      "Open your site in the Carrd editor and click + (Add Element) → Embed.",
+      "Set Type to Code, Style to Hidden, and Location to Head.",
+      "Paste the full Google tag snippet into the Code box.",
+      "Publish the site, then open it in a new tab and check GA4 → Reports → Realtime. Your visit should show up within a minute."
+    ],
+    "gotchas": [
+      "If Carrd won't let you add the Embed element, your plan doesn't include Embeds. Pro Lite does not have them.",
+      "Carrd sections load on the same page, so by default GA4 records one page view per visit. To track sections, turn on Enhanced Measurement → 'Page changes based on browser history events'.",
+      "Ad blockers hide 20–40% of visitors from GA4. Treat the numbers as a trend, not an exact count."
+    ],
+    "faq": [
+      ["Can I add Google Analytics to Carrd for free?", "No. The free plan doesn't let you add custom code, and GA4 needs a code snippet. You need a plan that includes Embeds (Pro Standard or higher)."],
+      ["Where do I put the GA4 code in Carrd?", "In a hidden Embed element with Location set to Head. That puts the tag in the page's <head>, which is where Google asks you to install it."],
+      ["Does Carrd have its own analytics?", "No. Carrd has no built-in analytics dashboard, so people use GA4 or a privacy-friendly tool like Plausible or Fathom, which go in through the same Embed element."]
+    ],
+    "related": ["meta-pixel", "custom-domain", "embed-code"]
+  },
+  {
+    "slug": "custom-domain",
+    "keyword": "carrd custom domain",
+    "title": "How to Connect a Custom Domain to Carrd",
+    "tier": "Pro Standard",
+    "summary": "Free Carrd sites live at yourname.carrd.co. To use yourname.com you need a Pro plan that includes custom domains, plus a domain you've bought from a registrar.",
+    "steps": [
+      "Buy a domain from any registrar (Namecheap, Cloudflare, Porkbun, GoDaddy and so on).",
+      "In the Carrd editor, open the site menu → Publish settings, and change the domain option from the .carrd.co subdomain to Custom domain.",
+      "Enter your domain (for example example.com) and publish.",
+      "Carrd shows the DNS records to add. At your registrar, add exactly those records and remove any old A records for the same host.",
+      "Wait for DNS to update (usually minutes, sometimes a few hours), then load your domain. Carrd sets up HTTPS automatically once DNS resolves."
+    ],
+    "gotchas": [
+      "Copy the DNS values from the Carrd screen itself. Carrd's IP addresses can change, so an old blog post may give you out-of-date values.",
+      "If you use Cloudflare, set the records to 'DNS only' (grey cloud) until Carrd has issued your certificate.",
+      "Decide on www or no www and set up the other one to redirect, so search engines don't index both."
+    ],
+    "faq": [
+      ["Can you use a custom domain on free Carrd?", "No. Custom domains need a paid Pro plan that includes them. The free plan only publishes to a .carrd.co subdomain."],
+      ["Does Carrd sell domains?", "No. You buy the domain from a registrar and point it at Carrd with DNS records."],
+      ["How long does a Carrd custom domain take to work?", "Usually under an hour once the DNS records are right. It can take up to 24–48 hours if your registrar caches DNS for a long time."]
+    ],
+    "related": ["google-analytics", "remove-branding", "contact-form"]
+  },
+  {
+    "slug": "contact-form",
+    "keyword": "carrd contact form",
+    "title": "How to Add a Contact Form to Carrd",
+    "tier": "Pro Standard",
+    "summary": "Carrd's Form element can send messages to your email or to tools like Mailchimp, but it's a paid feature. Here's how to set it up so messages don't end up in spam.",
+    "steps": [
+      "Click + (Add Element) → Form.",
+      "Choose the Contact type (name, email, message) or Custom to pick your own fields.",
+      "Under the form's Send to setting, choose Email and enter the address that should receive messages.",
+      "Set a success action: show a message, or redirect to a thank-you section. A thank-you section also lets you track sign-ups as a GA4 event.",
+      "Publish, send yourself a test message, and check your spam folder the first time."
+    ],
+    "gotchas": [
+      "The first few form emails often go to spam. Mark them 'Not spam' so later ones reach your inbox.",
+      "If the Form element is locked, your plan doesn't include forms.",
+      "To collect newsletter sign-ups rather than messages, use the Signup form type with a Mailchimp, ConvertKit or similar integration."
+    ],
+    "faq": [
+      ["Are Carrd forms free?", "No. Forms are a Pro feature (Pro Standard and above). A free workaround is a mailto: button, but that shows your email address to spammers."],
+      ["Can Carrd forms connect to Google Sheets?", "Not directly. Send the form to a webhook (Zapier, Make or similar) and have that write a row to Google Sheets."],
+      ["Where do Carrd form submissions go?", "To whatever you pick under Send to: an email address, an email marketing tool, or a webhook URL."]
+    ],
+    "related": ["email-signup", "custom-domain", "google-analytics"]
+  },
+  {
+    "slug": "email-signup",
+    "keyword": "carrd mailchimp signup form",
+    "title": "How to Collect Email Sign-ups on Carrd (Mailchimp, ConvertKit and more)",
+    "tier": "Pro Standard",
+    "summary": "Many people use Carrd for waitlists and launch pages. A Signup form sends new subscribers straight to your email tool, with no Zapier needed for the main providers.",
+    "steps": [
+      "Add Element → Form → Signup.",
+      "Under Send to, pick your provider (for example Mailchimp or ConvertKit) and connect it with the API key or list ID Carrd asks for.",
+      "Choose the list or audience that new sign-ups should join.",
+      "Keep it to one field (email) for the most sign-ups. Add a first-name field only if you'll really use it.",
+      "Publish and subscribe with a test address to check it arrives in your email tool."
+    ],
+    "gotchas": [
+      "If your provider uses double opt-in, sign-ups only appear after they click the confirmation email.",
+      "If your provider isn't listed, use a webhook with Zapier or Make to connect it.",
+      "Put the form above the fold. On a one-page Carrd site, visitors decide within a few seconds."
+    ],
+    "faq": [
+      ["Can I make a waitlist page with Carrd?", "Yes. A Carrd page with a Signup form is one of the fastest ways to build a waitlist. You need a Pro plan with forms."],
+      ["Does Carrd integrate with Mailchimp?", "Yes. Mailchimp is one of the providers built into the Signup form."]
+    ],
+    "related": ["contact-form", "custom-domain", "google-analytics"]
+  },
+  {
+    "slug": "remove-branding",
+    "keyword": "remove made with carrd",
+    "title": "How to Remove 'Made with Carrd' Branding",
+    "tier": "Pro Lite",
+    "summary": "Free Carrd sites show a small 'Made with Carrd' badge. Any Pro plan removes it, and Pro Lite is the cheapest way to do that.",
+    "steps": [
+      "Upgrade the account to any Pro plan.",
+      "Open the site in the editor. The branding option appears in the site/publish settings once you're on Pro.",
+      "Turn off the Carrd branding and publish again."
+    ],
+    "gotchas": [
+      "Hiding the badge with CSS on the free plan needs custom code, which the free plan can't use, and it breaks Carrd's terms anyway.",
+      "If removing the badge is all you need, Pro Lite is enough. Pick a higher plan only if you also need forms, embeds or a custom domain."
+    ],
+    "faq": [
+      ["What is the cheapest Carrd plan without branding?", "Pro Lite, the entry-level Pro plan."],
+      ["Does removing Carrd branding help SEO?", "Not directly. It mainly makes the site look more professional, which matters for portfolios and business pages."]
+    ],
+    "related": ["custom-domain", "google-analytics", "contact-form"]
+  },
+  {
+    "slug": "spotify-embed",
+    "keyword": "carrd spotify",
+    "title": "How to Add a Spotify Player to Carrd",
+    "tier": "Pro Standard",
+    "summary": "Music carrds often show a Spotify song or playlist. The playable widget needs an Embed element (Pro Standard). On the free plan you can add a styled link button instead.",
+    "steps": [
+      "In Spotify, open the song, album or playlist → ⋯ → Share → Embed track (or Embed playlist). Pick the compact or full size and copy the code.",
+      "In Carrd: Add Element → Embed. Set Type to Code and Style to Inline.",
+      "Paste the Spotify iframe code and set a width that fits your layout.",
+      "Publish and test on your phone, because Spotify's compact player behaves differently on mobile."
+    ],
+    "gotchas": [
+      "Browsers won't autoplay music with sound, and Spotify's widget doesn't either. Visitors have to press play.",
+      "The free workaround is a Buttons element with a Spotify icon linking to the playlist. It's not playable on the page, but it takes up little space.",
+      "Apple Music has an embed tool too (on Apple's marketing tools site), and it goes in the same way."
+    ],
+    "faq": [
+      ["Can I add Spotify to Carrd for free?", "You can link to Spotify for free. A playable embedded player needs the Embed element, which is Pro Standard or higher."],
+      ["How do I add Apple Music to Carrd?", "Get the embed code from Apple Music's share options or marketing tools, then paste it into an Embed element, the same way as Spotify."]
+    ],
+    "related": ["embed-code", "google-analytics", "remove-branding"]
+  },
+  {
+    "slug": "embed-code",
+    "keyword": "carrd embed code",
+    "title": "How to Add Custom HTML, CSS & JavaScript to Carrd",
+    "tier": "Pro Standard",
+    "summary": "Almost every advanced Carrd trick (custom fonts, animations, widgets, tracking) runs through one element: Embed. Here's how it works and what it can do.",
+    "steps": [
+      "Add Element → Embed.",
+      "Choose Type: Code for raw HTML/CSS/JS, or a URL-based type for supported widgets.",
+      "Choose Style: Inline shows the output where you place it. Hidden runs code without taking up space (for tracking, CSS and scripts).",
+      "For Hidden embeds, choose Location: Head for tracking tags and CSS, Body End for scripts that need the page to load first.",
+      "Publish. Embeds often don't run inside the editor preview, so always test on the live site."
+    ],
+    "gotchas": [
+      "Write your CSS against your own element IDs (set in each element's settings). Carrd's generated class names can change.",
+      "Scripts that load before the page is ready will fail. Use Body End or wrap them in a DOMContentLoaded listener.",
+      "Heavy embeds slow down a one-page site. Keep third-party widgets to a minimum."
+    ],
+    "faq": [
+      ["Which Carrd plan allows custom code?", "Embeds, and so custom code, need Pro Standard or higher."],
+      ["Can I add custom CSS to Carrd?", "Yes, with a hidden Embed element containing a <style> block, set to the Head location."]
+    ],
+    "related": ["google-analytics", "spotify-embed", "meta-pixel"]
+  },
+  {
+    "slug": "meta-pixel",
+    "keyword": "carrd facebook pixel",
+    "title": "How to Add the Meta (Facebook) Pixel to Carrd",
+    "tier": "Pro Standard",
+    "summary": "If you run Instagram or Facebook ads to a Carrd landing page, you need the Meta Pixel to measure results. It installs through a hidden Embed.",
+    "steps": [
+      "In Meta Events Manager, create a Pixel and copy its base code.",
+      "In Carrd: Add Element → Embed → Type: Code, Style: Hidden, Location: Head.",
+      "Paste the Pixel base code and publish.",
+      "Check it's working with the Meta Pixel Helper browser extension on your live URL.",
+      "To track sign-ups, send people to a thank-you section after the form and fire a Lead event there."
+    ],
+    "gotchas": [
+      "iOS privacy settings and ad blockers hide many events. Use Meta's Conversions API if ad spend is significant.",
+      "If you serve visitors in the EU or UK, add a cookie consent step before the Pixel loads."
+    ],
+    "faq": [
+      ["Can I use the Facebook Pixel on free Carrd?", "No. The Pixel needs custom code, and that needs an Embed-capable plan (Pro Standard or higher)."]
+    ],
+    "related": ["google-analytics", "embed-code", "custom-domain"]
+  },
+  {
+    "slug": "password-protect",
+    "keyword": "carrd password protect",
+    "title": "How to Password-Protect a Carrd Site",
+    "tier": "Pro Plus",
+    "summary": "Private portfolios, client previews and members-only pages need a password. Carrd offers this on its top plan, and the other routes are workarounds.",
+    "steps": [
+      "Make sure the account is on the Pro tier that includes password protection (check Carrd's current plan comparison).",
+      "Open the site's publish/settings panel and turn on password protection.",
+      "Set the password, publish, and test in a private browser window."
+    ],
+    "gotchas": [
+      "Hiding a section behind a secret #link isn't real protection. Anyone who finds the URL can see it.",
+      "Password-protected pages aren't indexed by search engines, so don't protect a page you want to rank."
+    ],
+    "faq": [
+      ["Can you password protect Carrd for free?", "No. Real password protection is a paid feature on Carrd's higher tier."]
+    ],
+    "related": ["custom-domain", "contact-form", "remove-branding"]
+  },
+  {
+    "slug": "sell-with-stripe",
+    "keyword": "carrd stripe payments",
+    "title": "How to Sell Products or Take Payments on Carrd",
+    "tier": "Pro Standard",
+    "summary": "Carrd isn't a store, but one-product pages, commissions, digital downloads and pre-orders work well. Use payment links, or a payment-enabled form where your plan includes one.",
+    "steps": [
+      "Easiest route: create a Stripe Payment Link, PayPal.me link, Ko-fi or Gumroad product for each item.",
+      "In Carrd, add a Buttons element (the 'Buy' button) that links to that payment link. Buttons work on every plan.",
+      "For custom fields such as commission details, use a Form element and send people to the payment link after they submit.",
+      "Add a thank-you/confirmation section and set the payment link's success URL to it, so you can track purchases."
+    ],
+    "gotchas": [
+      "Payment links send buyers off your site to pay, which is normal and trusted for small sellers.",
+      "Artists taking commissions: say your terms of service and refund policy on the page before the Buy button."
+    ],
+    "faq": [
+      ["Can you sell on Carrd?", "Yes, for a small number of products. Link Buy buttons to Stripe, PayPal, Ko-fi or Gumroad. For a full catalogue, use a real e-commerce platform."],
+      ["Is Carrd good for art commissions?", "Yes, it's one of the most popular uses. Put a price sheet, TOS and a request form (Pro) or a Ko-fi link (free) on one page."]
+    ],
+    "related": ["contact-form", "custom-domain", "google-analytics"]
+  },
+  {
+    "slug": "multiple-pages",
+    "keyword": "carrd multiple pages",
+    "title": "How to Make a Multi-Page Site in Carrd",
+    "tier": "Free (limited) / Pro for more",
+    "summary": "Carrd is built around one page, but hidden sections work like separate pages: /#about, /#work, /#contact. Here's how to set up navigation that feels like a multi-page site.",
+    "steps": [
+      "Add Element → Section break (a Header/Footer or Section divider). Each section break starts a new 'page'.",
+      "Give each section a name, such as about. Its URL becomes yoursite.com/#about.",
+      "Make a nav with a Buttons or Links element pointing to #about, #work, #contact.",
+      "Set the first section as the default (home) and hide the others until their link is clicked.",
+      "Use the Header/Footer section setting for navigation that appears on every 'page'."
+    ],
+    "gotchas": [
+      "Search engines treat all sections as one URL. If you want each topic to rank on its own, build separate sites (Pro plans allow several) or use a multi-page builder.",
+      "Element limits apply to the whole site, so very large sites can hit them."
+    ],
+    "faq": [
+      ["Can Carrd have multiple pages?", "Carrd sites are one page, but hidden sections with their own #links act like pages. Pro plans also let you build several separate sites."],
+      ["Does each Carrd section get indexed separately by Google?", "No. #section URLs are treated as the same page."]
+    ],
+    "related": ["custom-domain", "google-analytics", "remove-branding"]
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "linktree",
+    "competitor": "Linktree",
+    "keyword": "carrd vs linktree",
+    "one_liner": "Linktree is a list of links. Carrd is a full one-page website that can also be a link-in-bio.",
+    "pick_carrd": ["You want full control of design and layout, not a fixed stack of buttons", "You want your own domain and a page that also works as a portfolio or landing page", "You'd rather pay a small yearly fee than a monthly subscription"],
+    "pick_other": ["You want the fastest possible setup, with just links and no design", "You want built-in link-click analytics without installing anything", "You mainly need creator commerce features built into the link list"],
+    "rows": [["What you build", "A full one-page website", "A list of links"], ["Design freedom", "High: any layout, fonts, backgrounds", "Low to medium: themes and button styles"], ["Custom domain", "Yes, on Pro", "Only on higher paid tiers"], ["Built-in analytics", "No (add GA4 on Pro)", "Yes"], ["Billing", "Yearly", "Monthly or yearly"]],
+    "verdict": "If your bio link is all you need, Linktree is fine. If you want the link to feel like your own site (portfolio, commissions, launch page), Carrd gives you much more for the money."
+  },
+  {
+    "slug": "wix",
+    "competitor": "Wix",
+    "keyword": "carrd vs wix",
+    "one_liner": "Wix builds full multi-page websites with stores and apps. Carrd builds one fast, simple page.",
+    "pick_carrd": ["You need one page: portfolio, landing page, link-in-bio, event, waitlist", "You want to finish in an afternoon", "Budget matters: Carrd Pro is billed yearly at a much lower cost"],
+    "pick_other": ["You need many pages, a blog or a full online store", "You want bookings, members areas or an app marketplace", "You want each page to rank separately in Google"],
+    "rows": [["Pages", "One page (with section 'pages')", "Unlimited pages"], ["Learning curve", "Minutes", "Hours to days"], ["E-commerce", "Payment links only", "Full store"], ["Page speed", "Very light by default", "Heavier; depends on apps"], ["Cost", "Low yearly fee", "Monthly subscription"]],
+    "verdict": "Wix is the better choice for a business site with many pages. For a single-purpose page, Carrd is faster to build, faster to load and far cheaper."
+  },
+  {
+    "slug": "squarespace",
+    "competitor": "Squarespace",
+    "keyword": "carrd vs squarespace",
+    "one_liner": "Squarespace is a polished full-site platform. Carrd is a one-page tool that costs a fraction of the price.",
+    "pick_carrd": ["Your site is one page", "You want the lowest ongoing cost", "You like building from a blank canvas"],
+    "pick_other": ["You need a blog, store or scheduling built in", "You want designer templates for a multi-page brand site", "You need built-in analytics and SEO tools across many pages"],
+    "rows": [["Best for", "Single-purpose pages", "Multi-page brand sites"], ["Blog", "No", "Yes"], ["Store", "Payment links", "Full commerce"], ["Price model", "Yearly, low", "Monthly/yearly, higher"]],
+    "verdict": "Most freelancers and creators who start on Squarespace only use one or two pages. If that's you, Carrd does the job for much less."
+  },
+  {
+    "slug": "framer",
+    "competitor": "Framer",
+    "keyword": "carrd vs framer",
+    "one_liner": "Framer is a design-first builder for animated, multi-page marketing sites. Carrd is simpler and cheaper for one page.",
+    "pick_carrd": ["You aren't a designer and want something simple", "One page is enough", "You want the cheapest way to get a custom domain live"],
+    "pick_other": ["You want rich animations and interactions", "You need a CMS or many pages", "You already design in Figma and want a similar workflow"],
+    "rows": [["Skill needed", "Low", "Medium to high"], ["Animations", "Basic built-in", "Advanced"], ["CMS", "No", "Yes"], ["Cost", "Low yearly", "Monthly per site"]],
+    "verdict": "Framer is for design-heavy marketing sites. Carrd is for getting a clean page live today on a small budget."
+  },
+  {
+    "slug": "webflow",
+    "competitor": "Webflow",
+    "keyword": "carrd vs webflow",
+    "one_liner": "Webflow is a professional visual development platform. Carrd is the no-learning-curve option.",
+    "pick_carrd": ["You don't want to learn CSS concepts", "You need one page, fast", "Cost matters"],
+    "pick_other": ["You're building a large site, often for a client", "You need a CMS, detailed SEO control and custom interactions", "You're comfortable with box model and layout concepts"],
+    "rows": [["Learning curve", "Minutes", "Weeks"], ["Pages / CMS", "One page / No", "Many / Yes"], ["Who it's for", "Creators, freelancers, founders", "Designers, agencies, marketing teams"], ["Cost", "Low yearly", "Monthly per site, plus workspace plans"]],
+    "verdict": "Use Webflow when the site is a product in itself. Use Carrd when the site only needs to do one job and stay out of the way."
+  },
+  {
+    "slug": "beacons",
+    "competitor": "Beacons",
+    "keyword": "carrd vs beacons",
+    "one_liner": "Beacons is an all-in-one creator link-in-bio with a store and media kit. Carrd is an open canvas.",
+    "pick_carrd": ["You care about a unique design", "You want your own domain on a cheap plan", "You don't want platform branding"],
+    "pick_other": ["You want built-in digital product sales and a media kit", "You want creator tools managed for you"],
+    "rows": [["Design freedom", "High", "Template-based"], ["Built-in store", "No (payment links)", "Yes"], ["Media kit", "Build your own", "Built in"]],
+    "verdict": "Beacons suits creators who want commerce tools bundled in. Carrd suits creators who want a page that looks like nobody else's."
+  },
+  {
+    "slug": "notion",
+    "competitor": "Notion (as a website)",
+    "keyword": "carrd vs notion website",
+    "one_liner": "A public Notion page is free and fast to publish, but it looks like Notion. Carrd looks like a real website.",
+    "pick_carrd": ["You want a designed look with your own branding", "You want forms, sign-ups and a custom domain on a cheap plan"],
+    "pick_other": ["The content is docs, a wiki or a long resource list", "It needs frequent editing by a team"],
+    "rows": [["Look", "Designed website", "Notion document"], ["Forms", "Yes (Pro)", "Needs third-party"], ["Best for", "Landing pages, portfolios", "Docs, wikis, resource lists"]],
+    "verdict": "Use Notion for documents and Carrd for anything that needs to impress a visitor in five seconds."
+  },
+  {
+    "slug": "rentry",
+    "competitor": "Rentry",
+    "keyword": "rentry or carrd",
+    "one_liner": "Rentry is a free markdown pastebin that people use for bios. Carrd is a visual site builder.",
+    "pick_carrd": ["You want images, colors, layout and a proper design", "You want your page to look good on mobile"],
+    "pick_other": ["You only need text and want zero setup", "You like writing in markdown"],
+    "rows": [["Editing", "Visual drag-and-drop", "Markdown text"], ["Design", "Full control", "Very limited"], ["Cost", "Free / low yearly Pro", "Free"]],
+    "verdict": "Rentry is fine for a plain text bio. Carrd is the step up when you want your page to look like it's yours."
+  },
+  {
+    "slug": "google-sites",
+    "competitor": "Google Sites",
+    "keyword": "carrd vs google sites",
+    "one_liner": "Google Sites is free and multi-page but looks generic. Carrd gives much more design control.",
+    "pick_carrd": ["Design and first impressions matter", "You want forms, embeds and analytics in one place"],
+    "pick_other": ["It's an internal, school or team site", "You need several pages at no cost"],
+    "rows": [["Design control", "High", "Low"], ["Pages", "One (with sections)", "Many"], ["Cost", "Free / low yearly Pro", "Free"]],
+    "verdict": "Google Sites is for internal pages. Carrd is for pages the public will see."
+  }
+]

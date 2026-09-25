@@ -1,0 +1,35 @@
+{
+  "verified": false,
+  "verify_note": "Prices and feature tiers come from Carrd's public pricing as last known. Check them at https://carrd.co/pro, then set verified=true.",
+  "plans": [
+    {
+      "name": "Free",
+      "price": "$0",
+      "for": "Trying Carrd, fandom/bio carrds, simple one-pagers",
+      "includes": ["Up to 3 sites on a .carrd.co subdomain", "All core elements and templates", "Carrd branding shown"],
+      "lacks": ["Custom domain", "Forms", "Embeds / custom code (analytics, Spotify, pixels)"]
+    },
+    {
+      "name": "Pro Lite",
+      "price": "$9 / year",
+      "for": "Removing branding on a simple page",
+      "includes": ["More sites", "No Carrd branding", "More templates"],
+      "lacks": ["Custom domain", "Forms", "Embeds"]
+    },
+    {
+      "name": "Pro Standard",
+      "price": "$19 / year",
+      "for": "Most people: portfolios, landing pages, businesses",
+      "includes": ["Custom domains", "Forms (contact, signup, custom)", "Embeds: GA4, Meta Pixel, Spotify, custom code", "No branding"],
+      "lacks": ["Password protection and a few advanced extras"],
+      "recommended": true
+    },
+    {
+      "name": "Pro Plus",
+      "price": "$49 / year",
+      "for": "Power users, client work, private sites",
+      "includes": ["Everything in Standard", "Most sites", "Password protection", "Advanced form options"],
+      "lacks": []
+    }
+  ]
+}

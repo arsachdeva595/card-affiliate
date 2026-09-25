@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "portfolio",
+    "keyword": "carrd portfolio",
+    "audience": "Designers, illustrators & creatives",
+    "title": "How to Build a Portfolio Website with Carrd",
+    "why": "A portfolio needs to look good, load fast and point visitors to one action: hire me. That's what Carrd is built for.",
+    "sections": ["Hero: your name, what you do, one line on who you do it for", "Selected work: 6–9 best pieces in a gallery (quality over quantity)", "About: a short paragraph and a photo", "Services or rates (optional)", "Contact: form or email button"],
+    "plan": "Pro Standard",
+    "plan_reason": "A custom domain (yourname.com) and a contact form are what make a portfolio look professional, and both need Pro Standard.",
+    "tips": ["Use a Gallery element with lightbox so work opens full-screen.", "Link each project to a longer case study (Behance, Notion or another Carrd site).", "Put your contact button in the hero and again at the bottom."]
+  },
+  {
+    "slug": "art-commissions",
+    "keyword": "carrd commissions",
+    "audience": "Artists taking commissions",
+    "title": "How to Make an Art Commissions Page on Carrd",
+    "why": "Commission carrds are one of the most popular Carrd uses. One page holds your price sheet, examples, TOS and how to order.",
+    "sections": ["Status banner: OPEN / CLOSED / WAITLIST", "Price sheet: types (headshot, half-body, full-body) with example images", "Add-ons and extras", "Terms of service: payment, refunds, what you will and won't draw", "How to order: form or Ko-fi/PayPal link", "Queue or progress tracker (optional)"],
+    "plan": "Pro Standard",
+    "plan_reason": "An order form that collects references and details needs the Form element (Pro Standard). On the free plan you can link to Ko-fi or a Google Form instead.",
+    "tips": ["Put your TOS before the order button. It prevents most disputes.", "Keep a single 'Status' line at the top so you only edit one thing when you open or close.", "Show real finished examples for every price tier."]
+  },
+  {
+    "slug": "link-in-bio",
+    "keyword": "carrd link in bio",
+    "audience": "Creators & influencers",
+    "title": "How to Build a Link-in-Bio Page with Carrd (Linktree Alternative)",
+    "why": "A Carrd link-in-bio looks like your brand instead of a template, and one yearly Pro plan costs less than most monthly link tools.",
+    "sections": ["Profile photo + name + one-line bio", "Primary link buttons (3–6, most important first)", "Social icons row", "Featured content: latest video, product or newsletter sign-up"],
+    "plan": "Pro Lite",
+    "plan_reason": "Pro Lite removes the Carrd branding. Choose Pro Standard if you also want your own domain or a newsletter sign-up form.",
+    "tips": ["Keep one clear main link at the top and change it weekly.", "Use a narrow content width (around 20–24rem) so it looks like an app on phones.", "Add GA4 (Pro Standard) to see which links people click."]
+  },
+  {
+    "slug": "landing-page",
+    "keyword": "carrd landing page",
+    "audience": "Founders & indie hackers",
+    "title": "How to Build a Startup Landing Page with Carrd",
+    "why": "Indie hackers have launched thousands of products on Carrd because you can go from idea to live page with sign-ups in about an hour.",
+    "sections": ["Headline: the outcome you deliver", "Subheadline: who it's for + how", "Primary CTA: waitlist sign-up or buy", "3 benefits with icons", "Social proof: logos, tweets, numbers", "FAQ", "Final CTA"],
+    "plan": "Pro Standard",
+    "plan_reason": "Waitlist forms, a custom domain and GA4/Meta Pixel tracking all need Pro Standard, and a landing page is pointless without them.",
+    "tips": ["Test one headline at a time. With one page, it's easy to see what changed.", "Send the form to a thank-you section so you can count sign-ups in analytics.", "Build a separate Carrd site for each idea you test."]
+  },
+  {
+    "slug": "resume",
+    "keyword": "carrd resume website",
+    "audience": "Job seekers & students",
+    "title": "How to Make a Resume Website with Carrd",
+    "why": "A one-page resume site on your own domain helps you stand out from PDF applicants, and Carrd makes it quick.",
+    "sections": ["Name + target role", "Summary (2–3 lines)", "Experience with measurable results", "Skills", "Projects / links", "Download PDF + contact"],
+    "plan": "Pro Standard",
+    "plan_reason": "A custom domain (firstlast.com) is the main reason to upgrade here. Free works for a quick version.",
+    "tips": ["Match the site's headline to the roles you're applying for.", "Link a PDF copy for recruiters' applicant tracking systems.", "Put the URL in your email signature and LinkedIn."]
+  },
+  {
+    "slug": "musician",
+    "keyword": "carrd for musicians",
+    "audience": "Musicians, DJs & bands",
+    "title": "How to Build a Musician Website on Carrd",
+    "why": "Musicians need a hub for music, shows and merch that they can update in minutes. Carrd covers it on one page.",
+    "sections": ["Hero with latest release + listen buttons", "Embedded player (Spotify / Apple Music / SoundCloud)", "Tour dates", "Merch link", "Press kit / EPK", "Booking contact form"],
+    "plan": "Pro Standard",
+    "plan_reason": "Playable Spotify or Apple Music embeds and a booking form both need Pro Standard.",
+    "tips": ["Lead with one release, not your whole catalogue.", "Link tour dates to your ticketing page instead of retyping them.", "A clean EPK section makes it easier to get booked."]
+  },
+  {
+    "slug": "photographer",
+    "keyword": "carrd photography portfolio",
+    "audience": "Photographers",
+    "title": "How to Build a Photography Portfolio with Carrd",
+    "why": "Photos should carry the page. Carrd's full-bleed images and gallery lightboxes keep everything else out of the way.",
+    "sections": ["Full-screen hero image", "Gallery by category (sections as pages: /#weddings, /#portraits)", "Packages & pricing", "Testimonials", "Booking form"],
+    "plan": "Pro Standard",
+    "plan_reason": "Booking forms and a custom domain need Pro Standard. Also check image limits on your plan.",
+    "tips": ["Compress images before uploading to keep the page fast.", "Use hidden sections as category 'pages'.", "Put a booking button on every section."]
+  },
+  {
+    "slug": "freelancer",
+    "keyword": "carrd for freelancers",
+    "audience": "Freelancers & consultants",
+    "title": "How to Build a Freelancer Website with Carrd",
+    "why": "Clients want to know three things quickly: what you do, proof you can do it, and how to hire you. One Carrd page covers all three.",
+    "sections": ["Offer headline", "Services with starting prices", "Case studies / results", "Testimonials", "Process (3 steps)", "Contact / booking"],
+    "plan": "Pro Standard",
+    "plan_reason": "A custom domain and contact form are the minimum for being taken seriously by clients.",
+    "tips": ["Put starting prices on the page so you get fewer tyre-kickers.", "Embed a Calendly link via Embed (Pro Standard) for instant bookings."]
+  },
+  {
+    "slug": "event",
+    "keyword": "carrd event page",
+    "audience": "Event organisers",
+    "title": "How to Make an Event or Wedding Website with Carrd",
+    "why": "Events need one page with the date, place, schedule and an RSVP, live quickly and cheap enough to throw away afterwards.",
+    "sections": ["Name, date & location", "Countdown (via Embed)", "Schedule", "Venue + map", "RSVP form", "FAQ (dress code, parking, gifts)"],
+    "plan": "Pro Standard",
+    "plan_reason": "An RSVP form and a map or countdown embed need Pro Standard. Add Pro Plus if you want password protection for private guest lists.",
+    "tips": ["Send RSVPs to a spreadsheet via webhook.", "Add a map embed so guests don't need a separate link."]
+  },
+  {
+    "slug": "small-business",
+    "keyword": "carrd for small business",
+    "audience": "Local & small businesses",
+    "title": "Is Carrd Good for a Small Business Website?",
+    "why": "Plenty of cafés, salons, trades and service businesses only need hours, location, services and a way to get in touch. Carrd does that for a small yearly fee.",
+    "sections": ["What you do + where", "Services / menu", "Hours & location map", "Reviews", "Call / book / contact buttons"],
+    "plan": "Pro Standard",
+    "plan_reason": "A custom domain and contact form are must-haves for a business. Pro Standard includes both.",
+    "tips": ["Add a tap-to-call button (tel: link) for mobile visitors.", "Keep your name, address and phone exactly the same as on your Google Business Profile."]
+  },
+  {
+    "slug": "fandom-bio",
+    "keyword": "carrd byf dni",
+    "audience": "Fandom, roleplay & tumblr users",
+    "title": "How to Make a Fandom / BYF Carrd (Aesthetic Bio Guide)",
+    "why": "Carrd is the standard for fandom bios: about me, BYF/DNI, interests and socials, styled however you like.",
+    "sections": ["Intro: name, pronouns, age range", "About me / interests", "BYF (before you follow)", "DNI (do not interact)", "Favorites / fandoms", "Socials & links"],
+    "plan": "Free (Pro Lite to remove branding)",
+    "plan_reason": "The free plan covers most bio carrds. Upgrade to Pro Standard only for music embeds, custom fonts via code, or animated widgets.",
+    "tips": ["Use hidden sections as tabs (/#about, /#dni) to keep it tidy.", "Pick 2–3 colors and one decorative font for a consistent look.", "Credit resource creators for any dividers or pngs you use."]
+  },
+  {
+    "slug": "newsletter",
+    "keyword": "carrd newsletter landing page",
+    "audience": "Newsletter writers",
+    "title": "How to Build a Newsletter Sign-up Page with Carrd",
+    "why": "A focused sign-up page usually converts better than your newsletter platform's default page, and you control it.",
+    "sections": ["Headline: what readers get + how often", "Sign-up form", "Sample issue or topics list", "Social proof (subscriber count, testimonials)", "About the writer"],
+    "plan": "Pro Standard",
+    "plan_reason": "The Signup form with Mailchimp/ConvertKit integration needs Pro Standard.",
+    "tips": ["One field only: email.", "Show a real past issue. Being specific gets more sign-ups."]
+  }
+]
