@@ -34,6 +34,10 @@ Edit the JSON in `data/` and rebuild:
 
 1. Repo → Settings → Pages → Source: **GitHub Actions**.
 2. Merge to `main`. `.github/workflows/deploy.yml` builds, deploys, and pings IndexNow.
-3. Settings → Pages → Custom domain → enter your domain and follow the DNS instructions.
+   Keep this as the only Pages workflow. GitHub's "Static HTML" starter uploads the raw
+   repo without building it, so the live site would show source files.
+3. The site works at `https://<user>.github.io/card-affiliate/` straight away (all links are relative).
+4. For SEO, add a custom domain: Settings → Pages → Custom domain, follow the DNS steps,
+   and set the same domain as `base_url` (canonical tags and the sitemap use it).
 
 Cloudflare Pages or Netlify work too: build command `python3 generator/build.py`, output directory `dist`.
