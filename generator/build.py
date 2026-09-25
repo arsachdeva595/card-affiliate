@@ -7,6 +7,7 @@ No dependencies beyond the Python standard library.
     python3 generator/build.py
 """
 import json
+import re
 import shutil
 import sys
 from datetime import date
@@ -143,6 +144,12 @@ def page(path, title, description, body, schemas=(), priority="0.6", trail=None)
 </body>
 </html>
 """
+    # Make root-relative links (/style.css, /pricing/) relative to this page, so the
+    # site works at a domain root, under a sub-path (user.github.io/repo/) and when
+    # index.html is opened straight from disk. Absolute https:// URLs are untouched.
+    depth = len([p for p in path.split("/") if p])
+    prefix = "../" * depth or "./"
+    html = re.sub(r'(href|src)="/(?!/)', lambda m: f'{m[1]}="{prefix}', html)
     out = DIST / path.strip("/") / "index.html" if path != "/" else DIST / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
