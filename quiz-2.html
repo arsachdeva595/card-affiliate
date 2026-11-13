@@ -277,6 +277,9 @@ body {
   border-color: rgba(255,255,255,0.2);
 }
 
+.skip-row { text-align: center; margin-top: 18px; }
+.skip-link { color: var(--text-muted); font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+.skip-link:hover { color: var(--yellow); }
 .restart-row { text-align: center; margin-top: 20px; }
 .restart-btn {
   background: none;
@@ -744,7 +747,7 @@ body {
         list += '<div style="padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:14px;line-height:1.5;">'
           + '<span style="color:var(--yellow);font-weight:600;">' + (i+1) + '.</span> '
           + '<span style="color:var(--white);font-weight:500;">' + tricks[i][0] + '</span>'
-          + '<span style="color:var(--text-muted);"> — ' + tricks[i][1] + '</span>'
+          + '<span style="color:var(--text-muted);">: ' + tricks[i][1] + '</span>'
           + '</div>';
       }
       list += '</div>'
@@ -767,6 +770,24 @@ body {
   var progressEl = document.getElementById('progress');
   var history = [];
   var ctx = {};
+  var currentResult = null;
+  var started = false;
+
+  // Send events to the parent Carrd page, which forwards them to GA4.
+  function track(name, params) {
+    try { window.parent.postMessage({ source: 'swc-quiz', event: name, params: params || {} }, '*'); } catch (e) {}
+  }
+
+  // Referral clicks open in a new tab, so the parent page stays put and can log the event.
+  container.addEventListener('click', function(e) {
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || a.href.indexOf('carrd') === -1 || a.href.indexOf('arsachdeva') === -1) return;
+    track('affiliate_click', {
+      placement: 'quiz',
+      link_text: (a.textContent || '').trim().slice(0, 60),
+      quiz_result: currentResult || 'skip'
+    });
+  });
 
   function totalSteps() {
     if (history.length === 0) return 3;
@@ -799,6 +820,9 @@ body {
         + '><span class="opt-icon">' + o.icon + '</span>' + o.text + '</button>';
     }
     html += '</div>';
+    if (qid === 'q1') {
+      html += '<div class="skip-row"><a class="skip-link" href="' + REFERRAL + '" target="_blank" rel="noopener">Just take me to Carrd \u2192</a></div>';
+    }
     if (history.length > 0) {
       html += '<div class="back-row"><button class="back-btn" onclick="quiz.back()">← Back</button></div>';
     }
@@ -814,6 +838,7 @@ body {
         if (ctxData) {
           try { var d = JSON.parse(ctxData); for (var k in d) ctx[k] = d[k]; } catch(e) {}
         }
+        if (!started) { started = true; track('quiz_start', { first_choice: this.textContent.trim().slice(0, 60) }); }
         history.push({ qid: qid, idx: parseInt(this.getAttribute('data-idx')) });
         navigate(next);
       });
@@ -825,9 +850,8 @@ body {
     if (!fn) return;
     container.innerHTML = '<div class="q-screen active">' + fn(ctx) + '</div>';
     progressEl.style.width = '100%';
-    if (typeof gtag === 'function') {
-      gtag('event', 'quiz_complete', { result: rid, path_length: history.length });
-    }
+    currentResult = rid;
+    track('quiz_complete', { quiz_result: rid, path_length: history.length });
   }
 
   function navigate(target) {
@@ -836,7 +860,7 @@ body {
   }
 
   window.quiz = {
-    restart: function() { history = []; ctx = {}; renderQuestion('q1'); },
+    restart: function() { history = []; ctx = {}; currentResult = null; renderQuestion('q1'); },
     back: function() {
       if (history.length === 0) return;
       var prev = history.pop();
