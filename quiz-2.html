@@ -60,6 +60,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.q-label.invite { color: var(--yellow); font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .q-label {
   font-family: var(--font-body);
   font-size: 12px;
@@ -509,7 +510,7 @@ body {
   // --- QUIZ DATA ---
   var questions = {
     q1: {
-      label: 'Question 1',
+      label: 'Not sure which plan you need? Answer a few quick questions.',
       title: 'What are you looking to do with Carrd?',
       options: [
         { icon: '⚡', text: 'Build a page quickly', next: 'q2a' },
@@ -810,7 +811,7 @@ body {
     var q = questions[qid];
     if (!q) return;
     var html = '<div class="q-screen active">'
-      + '<div class="q-label">' + q.label + '</div>'
+      + '<div class="q-label' + (qid === 'q1' ? ' invite' : '') + '">' + q.label + '</div>'
       + '<div class="q-title">' + q.title + '</div>'
       + '<div class="options">';
     for (var i = 0; i < q.options.length; i++) {
